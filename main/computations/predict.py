@@ -5,7 +5,7 @@ import tensorflow as tf
 import numpy as np
 
 
-network=load_model('covid-19-model-5eps')
+network=load_model('./covid-19-model-5eps')
 
 
 def convert_to_array(image_path):
