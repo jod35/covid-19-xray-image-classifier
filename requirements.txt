@@ -1,0 +1,7 @@
+flask
+flask-sqlalchemy
+flask-marshmallow
+marshmallow-sqlalchemy
+tensorflow
+keras
+gunicorn
