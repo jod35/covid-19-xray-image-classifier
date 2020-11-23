@@ -1,19 +1,24 @@
 from flask import Flask
+from flask_fontawesome import FontAwesome
 from .config import DevConfig,ProductionConfig,TestConfig
 from .api.routes import api_bp
 from .utils.database import db
+from .ui.routes import ui_bp
 
 
 
 
 
 def create_app():
-    app=Flask(__name__)
+    app=Flask(__name__,static_folder='./static')
     app.config.from_object(DevConfig)
 
     db.init_app(app)
+    fa=FontAwesome(app)
 
     app.register_blueprint(api_bp,url_prefix='/api')
+
+    app.register_blueprint(ui_bp,url_prefix='/')
     
 
 

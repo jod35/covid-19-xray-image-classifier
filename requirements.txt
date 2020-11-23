@@ -5,3 +5,4 @@ marshmallow-sqlalchemy
 tensorflow
 keras
 gunicorn
+flask_fontawesome
