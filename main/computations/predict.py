@@ -3,9 +3,13 @@ from keras.models import load_model
 from keras.preprocessing.image import img_to_array,load_img
 import tensorflow as tf
 import numpy as np
+import os
 
+BASEDIR=os.path.dirname(os.path.realpath(__file__))
+file_path=BASEDIR+'/covid-19-model-5eps'
 
-network=load_model('./covid-19-model-5eps')
+network=tf.keras.models.load_model(file_path)
+
 
 
 def convert_to_array(image_path):
