@@ -38,6 +38,7 @@ def predict_image_class(image_array):
     final_class=class_names[np.argmax(predictions)]
 
     data={
+        "predictions":predictions,
         "score":score,
         "class":final_class
     }
