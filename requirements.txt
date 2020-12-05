@@ -7,3 +7,4 @@ keras
 gunicorn
 flask_fontawesome
 pillow
+flask_dropzone
