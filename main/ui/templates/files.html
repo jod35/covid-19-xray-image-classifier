@@ -8,6 +8,11 @@
                 <div class="card-img">
                     <img src="{{url_for('ui.upload',filename=file)}}" alt="" >
                 </div>
+                <div class="card-info">
+                    <p><i class="fas fa-file    "></i> {{file}}</p>
+                    <br>
+                    <p><i class="fas fa-calendar    "></i> Added :12/23/2323</p>
+                </div>
             </div>
         {% endfor %}
     </div>

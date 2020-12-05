@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'PT Sans Narrow', sans-ser
 
 }
 html{
@@ -98,6 +99,7 @@ nav a{
   background-color: rgb(21, 44, 44);
   margin: 20px;
   height: 400px;
+  color: white;
 }
 .card-img{
   height: 200px;
@@ -110,7 +112,28 @@ nav a{
   transition: all ease-in-out 0.5s;
 
 }
+.card-info{
+  padding: 20px;
+}
 
 .card-img img:hover{
   transform:scale(1.1);
+}
+@media(max-width:600px){
+  .nav{
+    flex-direction: column;
+  }
+  .form{
+    width: 80%;
+  }
+  .images{
+    display: block;
+    padding: 0;
+  }
+  .card{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    
+  }
 }
