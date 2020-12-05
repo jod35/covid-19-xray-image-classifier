@@ -4,7 +4,7 @@ from .config import DevConfig,ProductionConfig,TestConfig
 from .api.routes import api_bp
 from .utils.database import db
 from .ui.routes import ui_bp
-
+from flask_dropzone import Dropzone
 
 
 
@@ -15,6 +15,7 @@ def create_app():
 
     db.init_app(app)
     fa=FontAwesome(app)
+    dropzone=Dropzone(app)
 
     app.register_blueprint(api_bp,url_prefix='/api')
 

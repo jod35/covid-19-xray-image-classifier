@@ -1,44 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-
+<center>
+  <p>Simply drag an image </p>
+</center>
 <div class="form">
-  <form method="POST" action="/api/predict" enctype="multipart/form-data">
-    <div class="form-group">
-      <p>Name</p>
-      <input
-        type="text"
-        name="filename"
-        placeholder="Enter name of file to store"
-        class="form-control"
-      />
-    </div>
-    <div class="form-group">
-      <p>Picture</p>
-      <br /><br />
-      <label for="file-input">
-        <input
-          type="file"
-          name="file_path"
-          id="file-input"
-          value="Choose File"
-        />
-        <span class="upload"><i class="fa fa-camera"></i></span>
-        <span class="image-name"></span>
-      </label>
-    </div>
-    <div class="form-group">
-      <p>Description</p>
-      <textarea
-        name="description"
-        rows="8"
-        cols="0"
-        class="form-control"
-      ></textarea>
-      <br /><br />
-      <button type="submit" name="button" class="upload">
-        Upload a photo <i class="fas fa-upload"></i>
-      </button>
-    </div>
-  </form>
+ {{dropzone.create(action=url_for('api.predict_image'))}}
+ {{dropzone.config()}}
 </div>
 
 {% endblock content %}

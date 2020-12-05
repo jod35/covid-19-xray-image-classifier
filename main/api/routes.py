@@ -10,6 +10,7 @@ from flask import (
 )
 
 
+
 from ..computations.predict import convert_to_array, predict_image_class
 from werkzeug.utils import secure_filename
 import base64
@@ -33,7 +34,7 @@ def hello():
 def predict_image():
     file_name = request.form.get("filename")
     if request.files:
-        image = request.files["file_path"]
+        image = request.files["file"]
 
         file_name = secure_filename(image.filename)
 
@@ -50,6 +51,6 @@ def predict_image():
     return "<h1>Report</h1><p>Predictions:{}</p><p>Image Class :{}</p>"
 
 
-@app.config('/uploads/<filename>')
-def upload(filename):
-    return send_from_directory(current_app.config['UPLOADS_PATH'])
+# @app.config('/uploads/<filename>')
+# def upload(filename):
+#     return send_from_directory(current_app.config['UPLOADS_PATH'])
