@@ -51,6 +51,6 @@ def predict_image():
     return "<h1>Report</h1><p>Predictions:{}</p><p>Image Class :{}</p>"
 
 
-# @app.config('/uploads/<filename>')
-# def upload(filename):
-#     return send_from_directory(current_app.config['UPLOADS_PATH'])
+@api_bp.route('/uploads/<filename>')
+def upload(filename):
+    return send_from_directory(current_app.config['UPLOADS_PATH'])
