@@ -2,17 +2,29 @@
   font-family: "Courier New", Courier, monospace;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 
+}
+html{
+  background-color:darkslategray;
 }
 a{
     text-decoration: none;
 }
+.nav-bar{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
 nav{
-    background-color: lightslategray;
+    background-color: rgb(21, 44, 44);
     padding: 10px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    color: white;
    
 }
 nav a{
@@ -20,7 +32,7 @@ nav a{
 }
 .title{
     text-align: center;
-    color: lightslategray;
+    color: white;
     padding: 20px;
 }
 .form {
@@ -28,8 +40,8 @@ nav a{
   padding: 10px;
   margin-top: 20px;
   margin: auto;
-  background-color: lightslategray;
-  color: white;
+
+
 }
 .form-group{
     padding: 5px;
@@ -41,6 +53,10 @@ nav a{
 }
 #file-input {
   display: none;
+}
+.dropzone{
+  position: relative;
+  top: 100px;
 }
 .upload {
   color: white;
@@ -63,4 +79,38 @@ nav a{
   margin-bottom: 20px;
   display: flex;
   width: 40%;
+}
+
+.loading{
+  text-align: center;
+  display: none;
+}
+.images{
+  padding:2%;
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  width: 25%;
+  overflow: hidden;
+  background-color: rgb(21, 44, 44);
+  margin: 20px;
+  height: 400px;
+}
+.card-img{
+  height: 200px;
+  overflow: hidden;
+  margin: auto;
+
+}
+.card-img img{
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+
+}
+
+.card-img img:hover{
+  transform:scale(1.1);
 }

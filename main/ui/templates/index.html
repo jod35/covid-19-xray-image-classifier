@@ -1,10 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<center>
-  <p>Simply drag an image </p>
-</center>
+
 <div class="form">
  {{dropzone.create(action=url_for('api.predict_image'))}}
+ {{dropzone.style('border: 2px dashed lightgray; margin: 10%; min-height: 200px;')}}
  {{dropzone.config()}}
 </div>
-
+<div class="loading">
+  <img src="static/img/loading.gif" alt="">
+</div>
 {% endblock content %}

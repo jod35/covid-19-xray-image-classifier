@@ -7,6 +7,7 @@ class Config:
     SECRET_KEY='fb0e79f78c817d9fa844a8127c87afc4402a41d64f275caac42f5f5ee69e5ddd'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
     UPLOADS_PATH=os.path.join(BASEDIR,'uploads')
+    DROPZONE_REDIRECT_VIEW='ui.upload_complete'
     
   
     

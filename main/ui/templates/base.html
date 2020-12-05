@@ -8,11 +8,13 @@
     {{ dropzone.load_css() }}
   </head>
   <body>
-    <h1 class="title">Simple Flask file Upload</h1>
-    <nav>
-      <a href="{{ url_for('ui.index') }}">Add A File</a>
-      <a href="{{url_for('ui.show_records')}}">Show Recently</a>
-    </nav>
+    <section class="nav-bar">
+      <h1 class="title">Covid 19 Image Classifier</h1>
+      <nav>
+        <a href="{{ url_for('ui.index') }}">Add A File</a>
+        <a href="{{url_for('ui.show_records')}}">Show Recently</a>
+      </nav>
+    </section>
     <br /><br />
     {% if messages %} {% for message in messages %}
     <div class="message">

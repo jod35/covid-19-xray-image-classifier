@@ -38,19 +38,20 @@ def predict_image():
 
         file_name = secure_filename(image.filename)
 
+         
+
         image.save(os.path.join(current_app.config["UPLOADS_PATH"], file_name))
 
-        return "File saved"
+        file_path=os.path.join(current_app.config['UPLOADS_PATH'],file_name)
 
-        # array =convert_to_array(image.filename)
-        # image_class =predict_image_class(array)
-        # print(f"\n{image_class}")
+        array =convert_to_array(os.path.join(file_path))
+        image_class =predict_image_class(array)
+        print("\n{}".format(image_class))
 
-        # print("\n\n{}".format(image))
-
-    return "<h1>Report</h1><p>Predictions:{}</p><p>Image Class :{}</p>"
+    return make_response(jsonify({"message":"finished"}))
 
 
 @api_bp.route('/uploads/<filename>')
 def upload(filename):
     return send_from_directory(current_app.config['UPLOADS_PATH'])
+
