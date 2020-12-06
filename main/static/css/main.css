@@ -84,7 +84,11 @@ nav a{
 
 .loading{
   text-align: center;
-  display: none;
+  visibility: hidden;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  top: 200px;
 }
 .images{
   padding:2%;

@@ -9,6 +9,7 @@ ui_bp=Blueprint('ui',__name__,template_folder='./templates')
 
 @ui_bp.route('/')
 def index():
+    curr_app=current_app
     return render_template('index.html')
 
 
