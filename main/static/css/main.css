@@ -18,6 +18,7 @@ a{
   position: fixed;
   width: 100%;
   z-index: 2;
+  background-color: darkslategray;
 }
 nav{
     background-color: rgb(21, 44, 44);
@@ -57,6 +58,7 @@ nav a{
 }
 .dropzone{
   position: relative;
+  background-color: darkslategray;
   top: 100px;
 }
 .upload {
@@ -122,6 +124,9 @@ nav a{
 
 .card-img img:hover{
   transform:scale(1.1);
+}
+.predictions{
+  text-align: justify;
 }
 @media(max-width:600px){
   .nav{

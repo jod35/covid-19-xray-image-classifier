@@ -5,8 +5,11 @@ import tensorflow as tf
 import numpy as np
 import os
 import json
+import keras.backend as K
 
 BASEDIR=os.path.dirname(os.path.realpath(__file__))
+
+
 file_path=BASEDIR+'/covid-19-model-5eps'
 
 network=tf.keras.models.load_model(file_path)
@@ -20,7 +23,8 @@ def convert_to_array(image_path):
     """
     img=load_img(image_path,target_size=(224,224))
 
-    img_array=img_to_array(img)
+    img_array=img_to_array(img) 
+        
 
     """Expand the dimensions"""
 
@@ -34,6 +38,9 @@ def predict_image_class(image_array):
 
     score=tf.nn.softmax(predictions[0])
 
+    score=K.eval(score)
+
+
     class_names = ['covid','normal']
 
     final_class=class_names[np.argmax(predictions)]
@@ -41,12 +48,11 @@ def predict_image_class(image_array):
 
 
     data={
-        "predictions":predictions,
-        "score":score,
-        "class":final_class
+        "predictions":str(predictions),
+        "score":str(score),
+        "class":str(final_class)
     }
 
-    result=json.dumps(str(data))
-    return result
+    return data
 
 
