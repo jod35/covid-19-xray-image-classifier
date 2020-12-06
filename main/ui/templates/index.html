@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="form">
- {{dropzone.create(action=url_for('api.predict_image'))}}
- {{dropzone.style('border: 2px dashed lightgray; margin: 10%; min-height: 200px;')}}
- {{dropzone.config()}}
+  <form action="{{url_for('api.predict_image')}}" class="dropzone" id="filedrop">
+
+  </form>
 </div>
 <div class="loading">
   <img src="static/img/loading.gif" alt="">

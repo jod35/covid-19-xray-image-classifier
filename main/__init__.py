@@ -5,6 +5,7 @@ from .api.routes import api_bp
 from .utils.database import db
 from .ui.routes import ui_bp
 from flask_dropzone import Dropzone
+from .models.files import File
 
 
 
@@ -27,6 +28,7 @@ def create_app():
     def make_shell_context():
         return {"app":app,
                 "db":db,
+                "File":File
                 
                 }
 

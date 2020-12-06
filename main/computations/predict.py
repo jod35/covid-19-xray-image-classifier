@@ -4,6 +4,7 @@ from keras.preprocessing.image import img_to_array,load_img
 import tensorflow as tf
 import numpy as np
 import os
+import json
 
 BASEDIR=os.path.dirname(os.path.realpath(__file__))
 file_path=BASEDIR+'/covid-19-model-5eps'
@@ -37,13 +38,15 @@ def predict_image_class(image_array):
 
     final_class=class_names[np.argmax(predictions)]
 
+
+
     data={
         "predictions":predictions,
         "score":score,
         "class":final_class
     }
 
-
-    return data
+    result=json.dumps(str(data))
+    return result
 
 

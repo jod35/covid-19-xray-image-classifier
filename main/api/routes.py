@@ -38,17 +38,18 @@ def predict_image():
 
         file_name = secure_filename(image.filename)
 
-         
-
         image.save(os.path.join(current_app.config["UPLOADS_PATH"], file_name))
 
         file_path=os.path.join(current_app.config['UPLOADS_PATH'],file_name)
 
         array =convert_to_array(os.path.join(file_path))
+    
         image_class =predict_image_class(array)
-        print("\n{}".format(image_class))
+    
+        print("\n{}".format(type(image_class)))
 
-    return make_response(jsonify({"message":"finished"}))
+      
+    return make_response(jsonify({"message":image_class}))
 
 
 @api_bp.route('/uploads/<filename>')

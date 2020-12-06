@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="../static/css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-    {{ dropzone.load_css() }}
+    <link rel="stylesheet" href="../static/css/dropzone.css">
+    <script src="../static/js/dropzone.js"></script>
   </head>
   <body>
     <section class="nav-bar">
-      <h1 class="title">Covid 19 Image Classifier</h1>
+      <h1 class="title">Covid 19 Xray Image Classifier</h1>
       <nav>
-        <a href="{{ url_for('ui.index') }}">Add A File</a>
-        <a href="{{url_for('ui.show_records')}}">Show Recently</a>
+        <a href="{{ url_for('ui.index') }}"><i class="fas fa-upload    "></i> Add A File</a>
+        <a href="{{url_for('ui.show_records')}}"><i class="fas fa-eye    "></i>  Show Recently</a>
       </nav>
     </section>
     <br /><br />
@@ -24,9 +25,9 @@
       <a href="#" id="close-btn">X</a>
     </div>
     {% endfor %} {% endif %} {% block content %} {% endblock content %}
-
+    
     <script src="../static/js/index.js"></script>
-    {{ dropzone.load_js() }}
+  
   </body>
 </html>
 
