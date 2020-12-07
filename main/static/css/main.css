@@ -125,8 +125,13 @@ nav a{
 .card-img img:hover{
   transform:scale(1.1);
 }
-.predictions{
+.prediction{
   text-align: justify;
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  color: darkslategray;
+  padding: 20px;
 }
 @media(max-width:600px){
   .nav{
@@ -144,5 +149,8 @@ nav a{
     margin: auto;
     margin-top: 20px;
     
+  }
+  .prediction{
+    width: 80%;
   }
 }

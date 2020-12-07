@@ -18,7 +18,7 @@ Dropzone.options.filedrop = {
 
 
         this.on("success", function (file, response) {
-            messageSection.innerText = "Predicting Image Class";
+            messageSection.innerText = "Predicting Image Class ...";
 
 
 

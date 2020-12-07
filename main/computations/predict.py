@@ -36,8 +36,12 @@ def convert_to_array(image_path):
 def predict_image_class(image_array):
     predictions=network.predict(image_array,steps=1)
 
-    score=tf.nn.softmax(predictions[0])
+    # predictions=max(predictions)
 
+    score=tf.nn.softmax(predictions[0])
+    
+
+    print(f"\n\n{predictions[0]}\n\n")
     score=K.eval(score)
 
 
