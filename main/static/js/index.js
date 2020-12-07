@@ -28,7 +28,7 @@ Dropzone.options.filedrop = {
                 
                 <div class="prediction">
                     <h4>Results</h4>
-                    <p>File: ${file}</p>
+                    <p>File: ${file.name}</p>
                     <p>Predicted as : ${response.message.class}</p>
                     <p>Accuracy score: ${response.message.score}</p>
                     <p>Predictions: ${response.message.predictions}</p>

@@ -10,7 +10,7 @@ import keras.backend as K
 BASEDIR=os.path.dirname(os.path.realpath(__file__))
 
 
-file_path=BASEDIR+'/covid-19-model-5eps'
+file_path=BASEDIR+'/covid-19-model-5eps1'
 
 network=tf.keras.models.load_model(file_path)
 
@@ -41,7 +41,7 @@ def predict_image_class(image_array):
     score=tf.nn.softmax(predictions[0])
     
 
-    print(f"\n\n{predictions[0]}\n\n")
+    
     score=K.eval(score)
 
 
@@ -52,7 +52,7 @@ def predict_image_class(image_array):
 
 
     data={
-        "predictions":str(predictions),
+        "predictions":str(predictions[0][np.argmax(predictions)]),
         "score":str(score),
         "class":str(final_class)
     }
