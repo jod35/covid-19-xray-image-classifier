@@ -4,7 +4,6 @@ from .config import DevConfig,ProductionConfig,TestConfig
 from .api.routes import api_bp
 from .utils.database import db
 from .ui.routes import ui_bp
-from flask_dropzone import Dropzone
 from .models.files import File
 
 
@@ -12,11 +11,15 @@ from .models.files import File
 
 def create_app():
     app=Flask(__name__,static_folder='./static')
-    app.config.from_object(DevConfig)
+    
+
+    if app.debug:
+        app.config.from_object(DevConfig)
+    else:
+        app.config.from_object(ProductionConfig)
 
     db.init_app(app)
     fa=FontAwesome(app)
-    dropzone=Dropzone(app)
 
     app.register_blueprint(api_bp,url_prefix='/api')
 

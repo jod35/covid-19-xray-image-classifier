@@ -120,7 +120,11 @@ nav a{
 }
 .card-info{
   padding: 20px;
+  color: darkslategray;
+  background: white;
+  height: 100%;
 }
+
 
 .card-img img:hover{
   transform:scale(1.1);
@@ -132,6 +136,15 @@ nav a{
   background-color: white;
   color: darkslategray;
   padding: 20px;
+}
+.images{
+  color: white;
+ 
+}
+.noimages{
+  position: relative;
+  top: 200px;
+  color: white;
 }
 @media(max-width:600px){
   .nav{

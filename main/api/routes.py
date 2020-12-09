@@ -6,11 +6,12 @@ from flask import (
     jsonify,
     make_response,
     current_app,
-    send_from_directory
+    send_from_directory,
 )
 
 
-
+from main.models.files import File
+from main.utils.database import db
 from ..computations.predict import convert_to_array, predict_image_class
 from werkzeug.utils import secure_filename
 import base64
@@ -40,19 +41,26 @@ def predict_image():
 
         image.save(os.path.join(current_app.config["UPLOADS_PATH"], file_name))
 
-        file_path=os.path.join(current_app.config['UPLOADS_PATH'],file_name)
+        file_path = os.path.join(current_app.config["UPLOADS_PATH"], file_name)
 
-        array =convert_to_array(os.path.join(file_path))
-    
-        image_class =predict_image_class(array)
-    
+        array = convert_to_array(os.path.join(file_path))
+
+        image_class = predict_image_class(array)
+
+        new_file = File(
+            name=file_name,
+            predictions=image_class["predictions"],
+            score=image_class["score"],
+            predicted_class=image_class["class"]
+        )
+
+        new_file.save()
+
         print("\n{}".format(type(image_class)))
 
-      
-    return make_response(jsonify({"message":image_class}))
+    return make_response(jsonify({"message": image_class}))
 
 
-@api_bp.route('/uploads/<filename>')
+@api_bp.route("/uploads/<filename>")
 def upload(filename):
-    return send_from_directory(current_app.config['UPLOADS_PATH'])
-
+    return send_from_directory(current_app.config["UPLOADS_PATH"])

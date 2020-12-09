@@ -1,7 +1,8 @@
 from flask import Blueprint,render_template,request,url_for,send_from_directory,current_app
 from ..utils.database import db
 import os 
-
+from main.models.files import File
+from main.utils.database import db
 
 ui_bp=Blueprint('ui',__name__,template_folder='./templates')
 # image_folder=current_app.config['UPLOADS_PATH']
@@ -15,7 +16,7 @@ def index():
 
 @ui_bp.route('/files')
 def show_records():
-    files=os.listdir(current_app.config['UPLOADS_PATH'])
+    files=File.query.order_by(File.id.desc()).all()
     return render_template('files.html',files=files)
 
 @ui_bp.route('/upload_complete')

@@ -7,8 +7,16 @@ class File(db.Model):
     date_added=db.Column(db.DateTime(),default=datetime.utcnow)
     predictions=db.Column(db.Text())
     score=db.Column(db.Text())
+    predicted_class=db.Column(db.String(255),nullable=False)
 
-    def create(self):
+
+    # def __init__(self,name,predictions,score,date_added):
+    #     self.name=name
+    #     self.predictions=predictions
+    #     self.score=score
+    #     self.date_added=date_added
+
+    def save(self):
         db.session.add(self)
         db.session.commit()
 
@@ -17,4 +25,4 @@ class File(db.Model):
         db.session.commit()
 
     def __repr__(self):
-        return f"file +>> {self.name}"
+        return f"\n >>> {self.name}"

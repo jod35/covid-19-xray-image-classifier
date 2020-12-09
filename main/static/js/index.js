@@ -46,6 +46,12 @@ Dropzone.options.filedrop = {
 
         });
 
+        this.on('error', function(file, response) {
+            messageSection.innerText="Sorry An Error Occured during Processing the image.";
+            messageSection.style.color="red";
+            loadSpinner.style.visibility="hidden";
+        });
+
 
     }
 };
