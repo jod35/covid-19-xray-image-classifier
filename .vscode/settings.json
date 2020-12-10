@@ -1,4 +1,8 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "/home/jod35/anaconda3/bin/python"
+    "python.pythonPath": "/home/jod35/anaconda3/bin/python",
+    "cSpell.enableFiletypes": [
+        "dotenv",
+        "jinja"
+    ]
 }

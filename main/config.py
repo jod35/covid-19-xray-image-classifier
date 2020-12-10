@@ -1,5 +1,5 @@
 import os
-
+from decouple import config
 
 BASEDIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,7 +23,7 @@ class TestConfig(Config):
     
     
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI=config('PROD_DATABASE_URI')
     DEBUG=True
     SQLALCHEMY_ECHO=True
     

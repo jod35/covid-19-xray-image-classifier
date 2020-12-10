@@ -7,4 +7,5 @@ keras
 gunicorn
 flask_fontawesome
 pillow
-flask_dropzone
+psycopg2_binary
+python_decouple
