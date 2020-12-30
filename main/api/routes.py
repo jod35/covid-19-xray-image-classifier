@@ -12,7 +12,7 @@ from flask import (
 
 from main.models.files import File
 from main.utils.database import db
-from ..computations.predict import convert_to_array, predict_image_class
+from ..computations.predict import loadCovid19ImageFromName,loadRegularPneumoniaImageFromName
 from werkzeug.utils import secure_filename
 import base64
 import os
@@ -43,22 +43,20 @@ def predict_image():
 
         file_path = os.path.join(current_app.config["UPLOADS_PATH"], file_name)
 
-        array = convert_to_array(os.path.join(file_path))
-
-        image_class = predict_image_class(array)
+        pred=loadCovid19ImageFromName(file_path)
 
         new_file = File(
             name=file_name,
-            predictions=image_class["predictions"],
-            score=image_class["score"],
-            predicted_class=image_class["class"]
-        )
+        #     predictions=image_class["predictions"],
+        #     score=image_class["score"],
+        #     predicted_class=image_class["class"]
+        # )
 
-        new_file.save()
+        # new_file.save()
 
-        print("\n{}".format(type(image_class)))
+        # print("\n{}".format(type(image_class)))
 
-    return make_response(jsonify({"message": image_class}))
+    return make_response(jsonify({"message": pred}))
 
 
 @api_bp.route("/uploads/<filename>")
