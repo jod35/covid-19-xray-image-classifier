@@ -1,0 +1,13 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 12 30, 2020...5:43:3
+
+IMAGE : COVID.jpg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output : 0.04699881. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
