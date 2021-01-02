@@ -45,8 +45,8 @@ def predict_image():
 
         pred=loadCovid19ImageFromName(file_path)
 
-        new_file = File(
-            name=file_name,
+        # new_file = File(
+        #     name=file_name,
         #     predictions=image_class["predictions"],
         #     score=image_class["score"],
         #     predicted_class=image_class["class"]

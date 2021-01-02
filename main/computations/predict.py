@@ -289,7 +289,10 @@ def loadCovid19ImageFromName(filename):
     load = Image.open(filename)
     load = load.resize((CONSTANT_DIAGNOSIS_IMAGE_SPAN, CONSTANT_DIAGNOSIS_IMAGE_SPAN),Image.ANTIALIAS) #Resized "load" image to constant size on screen. However, neural network still runs on on original image scale from filename.
 
+ 
     DIAGNOSIS_RESULT = doOnlineInference_covid19Pneumonia (filename)
+
+
     
     data={
         "data":DIAGNOSIS_RESULT
