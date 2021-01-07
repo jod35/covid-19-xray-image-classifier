@@ -10,12 +10,6 @@ class File(db.Model):
     predicted_class=db.Column(db.String(255),nullable=False)
 
 
-    # def __init__(self,name,predictions,score,date_added):
-    #     self.name=name
-    #     self.predictions=predictions
-    #     self.score=score
-    #     self.date_added=date_added
-
     def save(self):
         db.session.add(self)
         db.session.commit()
