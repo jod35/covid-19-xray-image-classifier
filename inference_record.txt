@@ -343,3 +343,204 @@ Raw Neural Network Output
 
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:28:29
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0041-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.02106286. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:29:10
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0043-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.026164582. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:29:24
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0045-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.007919724. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:29:38
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0046-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.01291908. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:29:50
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0049-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.005958628. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:30:4
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0050-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.00554352. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:30:35
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/IM-0059-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.043725323. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 10, 2021...23:31:0
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/ryct.2020200034.fig5-day0.jpeg
+
+RESULT : 
+Covid19 detected
+Raw Neural Network Output 
+: 0.9996308. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 16, 2021...17:40:17
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/NORMAL2-IM-0052-0001.jpeg
+
+RESULT : 
+Covid19 detected
+Raw Neural Network Output 
+: 0.8425481. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 16, 2021...17:40:42
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/NORMAL2-IM-0110-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.016092338. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 16, 2021...17:41:4
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/NORMAL2-IM-0111-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.32383817. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 16, 2021...17:41:36
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/NORMAL2-IM-0130-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.0118874395. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 16, 2021...17:42:30
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/NORMAL2-IM-0131-0001.jpeg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.061755136. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 19, 2021...11:53:46
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/auntminnie-2020_01_31_20_24_2322_2020_01_31_x-ray_coronavirus_US.jpg
+
+RESULT : 
+Normal lungs detected
+Raw Neural Network Output 
+: 0.26907787. A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DATE/TIME : 1 19, 2021...12:1:3
+
+IMAGE : /home/jod35/coding/python/covid-19-xray-image-classifier/uploads/auntminnie-2020_01_31_20_24_2322_2020_01_31_x-ray_coronavirus_US.jpg
+

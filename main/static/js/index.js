@@ -23,7 +23,9 @@ Dropzone.options.filedrop = {
                 
                 <div class="prediction">
                     <h4>Results</h4>
-                    <p>${response.message.data}</p>
+                    <p>Neural Network Output: ${response.message.data.Output}</p>
+                    <p>Class : ${response.message.data.class} </p>
+                    <p> Severity is measured on a scale of 0 - 1. Values near 1 show illness as values near 0 show normalness"</p>
                 </div>
                 
                 `;
