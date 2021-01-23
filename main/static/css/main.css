@@ -3,8 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans Narrow', sans-ser
-
+  font-family: arial,Helvetica,sans-serif;
 }
 html{
   background-color:darkslategray;
@@ -27,7 +26,7 @@ nav{
     display: flex;
     justify-content: space-evenly;
     color: white;
-   
+
 }
 nav a{
     color: white;
@@ -88,7 +87,7 @@ nav a{
   text-align: center;
   visibility: hidden;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2em;
   position: relative;
   top: 200px;
 }
@@ -131,7 +130,8 @@ nav a{
 }
 .prediction{
   text-align: justify;
-  width: 50%;
+  width: 40%;
+  font-size: 0.98em;
   margin: auto;
   background-color: white;
   color: darkslategray;
@@ -139,14 +139,14 @@ nav a{
 }
 .images{
   color: white;
- 
+
 }
 .noimages{
   position: relative;
   top: 200px;
   color: white;
 }
-@media(max-width:600px){
+@media screen and (max-width:600px){
   .nav{
     flex-direction: column;
   }
@@ -161,7 +161,7 @@ nav a{
     width: 80%;
     margin: auto;
     margin-top: 20px;
-    
+
   }
   .prediction{
     width: 80%;
