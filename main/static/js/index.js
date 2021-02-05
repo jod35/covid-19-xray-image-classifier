@@ -1,5 +1,9 @@
 Dropzone.options.filedrop = {
+  
+   //activate the dropzone
   init: function () {
+
+
     const loadingSection = document.querySelector(".loading");
     const messageSection = document.querySelector(".msg");
     const loadSpinner = document.querySelector(".load-img");
@@ -14,18 +18,43 @@ Dropzone.options.filedrop = {
       messageSection.innerText = "Uploading ...";
     });
 
+    //if file is uploaded, 
     this.on("success", function (file, response) {
       messageSection.innerText = "Predicting Image Class ...";
 
       setTimeout(function () {
         loadSpinner.style.visibility = "hidden";
+
+        //show us the results
         let html = `
                 
                 <div class="prediction">
-                    <h4>Results</h4>
-                    <p>Neural Network Output: ${response.message.data.Output}</p>
-                    <p>Class : ${response.message.data.class} </p>
-                    <p> Severity is measured on a scale of 0 - 1. Values near 1 show illness as values near 0 show normalness"</p>
+                    <div>
+                        <h4>Covid Prediction </h4>
+                        <p>Neural Network Output: <strong class="pred">${response.message.covid_result.Output}</strong></p>
+                     
+                        <p >Class : <strong class="pred">${response.message.covid_result.class}</strong> </p>
+                     
+                        <strong>
+                          <p>
+                              Note: A value closer to 1 signifies illness <br> while one closer to 0 
+                              shows normalness
+                          </p>
+                        </strong>
+                    </div>
+                    <div>
+                        <h4>Other Predictions </h4>
+                        <p>Neural Network Output: <strong class="pred">${response.message.pneumonia_result.Output}</strong></p>
+                     
+                        <p >Class : <strong class="pred">${response.message.pneumonia_result.class}</strong> </p>
+                     
+                        <strong>
+                          <p> 
+                              Note: A value closer to 1 signifies illness <br> while one closer to 0 
+                              shows normalness
+                          </p>
+                        </strong>
+                    </div>
                 </div>
                 
                 `;
