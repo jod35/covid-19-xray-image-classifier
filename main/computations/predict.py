@@ -222,9 +222,9 @@ def doOnlineInference_regularPneumonia (imagePath):
         _prediction = DIAGNOSIS_MESSAGES[0];
     elif ( _prediction < 50 ):
         _prediction = DIAGNOSIS_MESSAGES[2];
-    outputContent = _prediction + "\n"
-    outputContent += "Raw Neural Network Output : \n" + str(prediction[0][0]) + ". A value closer to 1 signifies illness, while a value closer to 0 signifies normalness.\n\n"
-    recordInferenceEvent (imagePath, outputContent)
+
+    outputContent = {"Output": str(prediction[0][0]),"class":_prediction}
+
     return outputContent
 
 
@@ -290,12 +290,14 @@ def loadCovid19ImageFromName(filename):
     load = load.resize((CONSTANT_DIAGNOSIS_IMAGE_SPAN, CONSTANT_DIAGNOSIS_IMAGE_SPAN),Image.ANTIALIAS) #Resized "load" image to constant size on screen. However, neural network still runs on on original image scale from filename.
 
  
-    DIAGNOSIS_RESULT = doOnlineInference_covid19Pneumonia (filename)
+    DIAGNOSIS_RESULT_Covid = doOnlineInference_covid19Pneumonia (filename)
+    DIAGNOSIS_RESULT_Pneumonia=doOnlineInference_regularPneumonia (filename)
 
 
     
     data={
-        "data":DIAGNOSIS_RESULT
+        "covid_result":DIAGNOSIS_RESULT_Covid,
+        "pneumonia_result":DIAGNOSIS_RESULT_Pneumonia
     }
     
     return data
