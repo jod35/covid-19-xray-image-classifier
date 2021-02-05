@@ -47,12 +47,14 @@ def predict_image():
 
         # new_file = File(
         #     name=file_name,
-        #     predictions=image_class["predictions"],
-        #     score=image_class["score"],
-        #     predicted_class=image_class["class"]
+        #     predictions=pred["data"]["Output"],
+        #     score=pred["data"]["class"],
+        #     predicted_class=pred["data"]["class"]
         # )
 
-        # new_file.save()
+        # # new_file.save()
+
+        print(pred)
 
         # print("\n{}".format(type(image_class)))
 
