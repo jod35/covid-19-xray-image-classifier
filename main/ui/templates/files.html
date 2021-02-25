@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
- 
+
  {% if files %}
         <div class="images">
             {% for file in files %}
@@ -11,13 +11,13 @@
                     <div class="card-info">
                         <p><i class="fas fa-file"></i> {{file.name}}</p>
                         <br>
-                        <p><i class="fas fa-calendar    "></i> Added :{{file.date_added}}</p>
+                        <p><i class="fas fa-calendar    "></i> {{file.date_added.ctime()}}</p>
                         <br>
-                        <p> <i class="fas fa-stethoscope    "></i> Predictions: {{file.predictions}}</p>
+                        <p> <i class="fas fa-stethoscope    "></i> Covid 19 Score: <span class="red">{{file.covid_pred_score}}</span></p>
                         <br>
-                        <p> <i class="fas fa-book    "></i> Predicted as : {{file.predicted_class}}</p>
+                        <p> <i class="fas fa-book    "></i> Pneumonia score :<span class="red"> {{file.pneu_pred_score}}</span></p>
                         <br>
-                        <p></p>
+                        <p><a href="/details/{{file.id}}">Details</a></p>
                     </div>
                 </div>
             {% endfor %}
@@ -29,6 +29,5 @@
             </center>
         </div>
  {% endif %}
-     
-{% endblock content %}
+
     
