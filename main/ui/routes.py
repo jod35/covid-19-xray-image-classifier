@@ -27,3 +27,9 @@ def upload_complete():
 def upload(filename):
     return send_from_directory(
         current_app.config['UPLOADS_PATH'],filename)
+
+@ui_bp.route('/details/<int:id>')
+def file_details(id):
+    file_=File.query.get(id)
+
+    return render_template('details.html',file_=file_)
