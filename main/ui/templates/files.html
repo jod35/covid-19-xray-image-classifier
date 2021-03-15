@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
- {% if files %}
         <div class="images">
             {% for file in files %}
                 <div class="card">
@@ -22,12 +21,6 @@
                 </div>
             {% endfor %}
         </div>
-  {% else %}
-        <div class="noimages">
-            <center>
-                <h1>There are no images yet.</h1>
-            </center>
-        </div>
- {% endif %}
-
+ 
+{% endblock%}
     
