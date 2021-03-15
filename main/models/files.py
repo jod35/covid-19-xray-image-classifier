@@ -5,9 +5,10 @@ class File(db.Model):
     id=db.Column(db.Integer(),primary_key=True)
     name=db.Column(db.String(255),nullable=False)
     date_added=db.Column(db.DateTime(),default=datetime.utcnow)
-    predictions=db.Column(db.Text())
-    score=db.Column(db.Text())
-    predicted_class=db.Column(db.String(255),nullable=False)
+    pneu_pred_score=db.Column(db.Text(),nullable=False)
+    pneu_pred_class=db.Column(db.Text(),nullable=False)
+    covid_pred_score=db.Column(db.Text(),nullable=False)
+    covid_pred_class=db.Column(db.Text(),nullable=False)
 
 
     def save(self):
@@ -20,3 +21,4 @@ class File(db.Model):
 
     def __repr__(self):
         return f"\n >>> {self.name}"
+
