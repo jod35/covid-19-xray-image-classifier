@@ -45,14 +45,15 @@ def predict_image():
 
         pred=loadCovid19ImageFromName(file_path)
 
-        # new_file = File(
-        #     name=file_name,
-        #     predictions=pred["data"]["Output"],
-        #     score=pred["data"]["class"],
-        #     predicted_class=pred["data"]["class"]
-        # )
+        new_file = File(
+            name=file_name,
+            covid_pred_score=pred["covid_result"]["Output"],
+            pneu_pred_score=pred["pneumonia_result"]["Output"],
+            covid_pred_class=pred["covid_result"]["class"],
+            pneu_pred_class=pred["pneumonia_result"]["class"]
+        )
 
-        # # new_file.save()
+        new_file.save()
 
         print(pred)
 
