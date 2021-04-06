@@ -1,6 +1,7 @@
 # Covid 19 Xray image classifier
 
 This is a web app that helps us to classify images of chest Xrays as covid positive or negative and also tells us the existence of Pneumonia in lungs.
+![Image](covid3.gif)
 
 ## Built With 
 - Python
